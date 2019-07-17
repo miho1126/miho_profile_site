@@ -1,0 +1,570 @@
+@charset "UTF-8";
+
+body {
+  /* color: #333333; */
+  font-size: 16px;
+  font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/* header開始 */
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(2, 39, 250, 0.767);
+  font-size: 30px;
+  padding: 30px 0;
+  z-index: 1;
+}
+
+header .name {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  font-size: 50px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+  font: bold;
+}
+
+.header-right li {
+  margin-right: 40px;
+}
+/* header終わり */
+
+
+/* 画像の始まり */
+.album {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.album h1 {
+  position: absolute;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 5em;
+  width: 100%;
+  text-align: center;
+  top: 45%;
+  /* left: 50%; */
+  /* -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform:translate(-50%,-50%); */
+  /* margin: 0;
+  padding: 0; */
+}
+
+.album p {
+  position: absolute;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 3em;
+  top: 65%;
+  left: 35%; 
+  /* 下の部分を無効にしない場合は、left:50%設定で中央になる */
+  /* -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  margin-top: 0;
+  padding: 0;  */
+}
+
+/* 矢印始まり */
+.arrow1{
+  top: 85%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  transparent transparent #ffff #ffff;
+  transform: rotate(-45deg);
+  position: absolute;
+  /* -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform:translate(-50%,-50%); */
+}
+
+.arrow2{
+  top: 83%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  transparent transparent rgb(97, 96, 96) rgb(97, 96, 96);
+  transform: rotate(-45deg);
+  position: absolute;
+  /* -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform:translate(-50%,-50%); */
+}
+/* 矢印終わり */
+
+/* 画像の稼働 */
+.album img {
+  width: 100%;
+  height: 800px;
+	animation-name: album;
+	-webkit-animation-name: album;
+	animation-duration: 25s;
+	-webkit-animation-duration: 25s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+.album .img1 {
+	display: block;
+	margin: 0 auto;
+}
+
+.album .img2
+{
+	animation-delay:5s;
+	-webkit-animation-delay:5s;
+	position: absolute;
+	top: 0;
+}
+
+.album .img3{
+  animation-delay:10s;
+	-webkit-animation-delay:10s;
+	position: absolute;
+	top: 0;
+}
+
+.album .img4{
+  animation-delay:15s;
+	-webkit-animation-delay:15s;
+	position: absolute;
+	top: 0;
+}
+
+.album .img5{
+  animation-delay:20s;
+	-webkit-animation-delay:20s;
+	position: absolute;
+	top: 0;
+}
+
+@keyframes album {
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1) rotate(0deg);
+	}
+	25% {
+	    opacity: 0;
+	    transform: scale(1.1) rotate(0deg);
+	}
+	100% { opacity: 0 }
+}
+
+@-webkit-keyframes album {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+ 8% {
+    opacity: 1;
+    transform: scale(1.05);
+    animation-timing-function: ease-out;
+  }
+ 17% {
+    opacity: 1;
+    transform: scale(1.1) rotate(0deg);
+  }
+ 25% {
+    opacity: 0;
+    transform: scale(1.1) rotate(0deg);
+  }
+ 100% { opacity: 0 }
+  }
+
+/* 画像の終わり */
+
+
+
+/* Miho fukudomeと自画像の部分始まり */
+.curriculum {
+  padding: 10px;
+  background-color:rgb(248, 248, 248);
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 50px;
+  margin: 30px 0 40px 0;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+img {
+  border-radius: 40px;
+  box-shadow: 10px 10px 12px 12px rgba(50, 50, 50, 0.75);
+}
+/* Miho fukudomeと自画像の部分終わり */
+
+
+/* ボタン please call　me */
+* {
+  box-sizing: border-box;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  position: relative;
+  padding: 0.5em 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 2em;
+  margin: 1em 0.8em 0;
+}
+
+.button.type3 {
+  color: #435a6b;
+}
+
+.button.type3.type3::after, .button.type3.type3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+
+.button.type3.type3::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #435a6b;
+  border-right-color: #435a6b;
+}
+ .button.type3.type3::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #435a6b;
+  border-left-color: #435a6b;
+}
+.button.type3.type3:hover:after, .button.type3.type3:hover:before {
+  border-bottom-color: #435a6b;
+  border-right-color: #435a6b;
+  border-top-color: #435a6b;
+  border-left-color: #435a6b;
+  width: 100%;
+  height: 100%;
+}
+/* ボタン　please call me 終わり */
+
+/* 矢印始まり */
+ .arrow3{
+  left: 49%;
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  transparent transparent rgb(97, 96, 96) rgb(97, 96, 96);
+  transform: rotate(-45deg);
+  position: absolute;
+}
+/* 矢印終わり */
+
+
+.profile{
+  padding: 60px 0 0 40px;
+  font-size: 35px;
+}
+
+
+/* 文字を左右へ移動 ボタンを押してください */
+.scroll {
+  margin     : auto;
+  width      : 96%;
+  font-size  : 35px;
+  /* line-height: 1.5em; */
+  text-align : left;
+  color      : #535353;
+  overflow   : hidden;
+  padding-top: 30px;
+}
+.scroll span{
+  display     : inline-block;
+  white-space : nowrap;
+  /* line-height : 1em; */
+  animation   : scrollAnime 20s linear infinite alternate;
+}
+@keyframes scrollAnime{
+    0% {
+        margin-left: 100%;
+        transform  : translateX(-100%)
+       }
+  100% {
+        margin-left: 0;
+        transform  : translateX(0)
+       }
+}
+/* 文字を左右へ移動 ボタンを押してください 終わり*/
+
+
+/* ボタン　詳細 */
+.buttonChest {
+  top: 20px;
+  position: relative;
+  list-style: none;
+  display: block;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.buttonChest li {
+  display: inline-block;
+  position: relative;
+  min-height: 80px;
+  margin: 30px;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
+}
+
+.buttonChest li .click {
+  font-size: 1.5em;
+  position: absolute;
+  text-align: center;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  width: 100%;
+  top: 15px;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.buttonChest li:hover .click {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #fff;
+  top: 75px;
+  position: absolute;
+  padding-top: 4px;
+  padding-bottom: 5px;
+}
+
+.buttonChest li:hover {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scale(0.9) rotate(3deg);
+  -moz-transform: scale(0.9) rotate(3deg);
+  -ms-transform: scale(0.9) rotate(3deg);
+  -o-transform: scale(0.9) rotate(3deg);
+  transform: scale(0.9) rotate(3deg);
+}
+
+.button2 {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 15px 50px 15px 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 5px 0 rgba(50, 50, 50, 0.75);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.button2:hover {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  box-shadow: none;
+  border-bottom: solid 8px #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.navy {
+  background: #2c3e50;
+}
+
+.red {
+  background: #e74c3c;
+}
+
+.ocean {
+  background: #3498db;
+}
+
+.api {
+  background: #2980b9;
+}
+
+.chalk {
+  background: #ecf0f1;
+  color: #4d4d4d;
+}
+
+.drab {
+  background: #3f4036;
+}
+
+.teal {
+  background: #8da681;
+}
+
+.jason {
+  background: #bf2806;
+}
+
+.darkRed {
+  background: #8c1d04;
+}
+/* ボタン　詳細終わり */
+
+
+/* contact */
+.contact {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  background-color: #ebf4f5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 600px;
+}
+
+.thank{
+  padding: 0 350px;
+  line-break: strict;
+  font-size: 20px;
+}
+
+.contact .form {
+  margin: 50px 0 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact .form label{
+  display: block;
+  text-align: left;
+  font-size: 30px;
+}
+
+.form .name {
+  margin-bottom: 20px;
+}
+
+.form .name,
+.form .email {
+  margin-top: 10px;
+  display: block;
+  height: 50px;
+  width: 400px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding-left: 20px;
+  border-radius: 40px;
+  outline: none;
+}
+
+.form-left {
+  margin-right: 50px;
+}
+
+.form .inquiry {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 40px 0 40px;
+  height: 150px;
+  width: 400px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 40px;
+  outline: none;
+}
+
+.contact button {
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #ffffff;
+  color: rgb(70, 68, 68);
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 50px;
+  box-sizing: border-box;
+  transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+}
+
+.contact button:hover {
+  cursor: pointer;
+  background-color:#9dd8ee;
+  color: #fff;
+  transition: color .8s linear;
+  -webkit-transition: color .3s linear;
+  overflow: hidden;
+  text-transform: uppercase;
+
+}
+/* contactここまで */
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between;これはセットで覚えておく。 */
+  align-items: center;
+  background-color: #9dd8ee;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+}
+
+footer .footer-right {
+  margin-right: 80px;
+  font-size: 30px;
+}
+/* footerここまで */
